@@ -1,0 +1,306 @@
+/* color pallete: https://color.adobe.com/For-animation-color-theme-8144301/ */
+
+/* base fonts */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  color: #2C858D;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+h2 {
+  font-size: 275%;
+}
+
+h3 {
+  font-size: 250%;
+}
+
+h4 {
+  font-size: 225%;
+}
+
+h5 {
+  font-size: 200%;
+}
+
+h6 {
+  font-size: 175%;
+}
+
+p {
+  color: #74CEB7;
+  font-size: 150%;
+  line-height: 140%;
+  margin-bottom: 10px;
+}
+
+/* primary nav */
+
+header {
+  background: #FF2B65;
+  border-bottom: 3px solid #B3184A;
+ height: 75px; 
+  margin-bottom: 25px;
+  padding: 0 5%;
+}
+
+h2 {
+  background: url(../images/angry-unicorn.jpg) no-repeat;
+  background-size: cover;
+  border: 3px solid #B3184A;
+  border-radius: 50%;
+  float: left;
+  height: 50px;
+  margin-top: 12px;
+  text-indent: -99999px;
+  width: 50px;
+}
+
+.main-nav {
+  float: right;
+  padding-top: 15px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin: 15px 10px 0;
+}
+
+.main-nav a {
+  color: white;
+  font-size: 110%;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  border-bottom: 4px solid #B3184A;
+}
+
+/* body content */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container,
+.main-content,
+.secondary-content {
+  /*height: 500px;*/
+}
+
+.main-content {
+  display: inline-block;
+  vertical-align: top;
+  width: 75%;
+}
+
+.secondary-content {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+
+/* main content */
+
+.main-content p {
+  display: inline-block;
+  width: 50%;
+  
+}
+
+.hero-img {
+  border-radius: 10px;
+  margin-right: 10px;
+  vertical-align: top;
+  width: 45%;
+  float: right;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+} 
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+/* secondary content */
+
+.secondary-content {
+  border-left: 2px solid #FFDCEB;
+  text-align: center;
+  width: 24%;
+}
+
+.secondary-content li,
+.secondary-content p {
+  font-size: 140%;
+  line-height: 160%;
+}
+
+.secondary-content ul {
+  border-top: 2px solid #7EBF9C;
+  border-bottom: 2px solid #7EBF9C;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
+.secondary-content li{
+  color: #8DD6AF;
+}
+
+.secondary-content h3,
+.secondary-content p  {
+  color: #7EBF9C;
+  font-weight: 800;
+}
+
+.aside-img {
+  border: 5px solid #8DD6AF;
+  border-radius: 50%;
+  display: block;
+  height: 100px;
+  margin: 10px auto;
+  width: 100px;
+}
+
+/* footer */
+
+footer {
+  background: #B3184A;
+  /*height: 150px;*/
+}
+
+footer ul {
+  max-width: 697px;
+  margin: auto;
+}
+
+footer img {
+  width: 25px;
+  margin: 10px;
+}
+
+footer p {
+  color: white;
+}
+
+.three-column {
+  background: #FF2B65;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  height: 100px;
+  margin: 10px;
+  width: 200px;
+  vertical-align: top;
+}
+
+li.three-column {
+  padding: 5px;
+  text-align: center;
+}
+
+input {
+  border-radius: 10px;
+  border: 3px solid #B3184A;
+  height: 15px;
+  margin-bottom: 5px;
+  width: 50%;
+}
+
+.btn {
+  width: 50%;
+  padding: 3px;
+  color: white;
+  background: #B3184A;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+/* MEdia queries BreakPoints */
+
+
+@media only screen and (max-width:740px){
+
+  .main-content,
+  .secondary-content {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .secondary-content {
+    margin-top: 2rem;
+    border-top:solid 1px #FFDCEB;
+    border-left: none;
+  }
+
+}
+
+
+
+@media only screen and (max-width:700px) {
+
+  footer ul {
+    padding-top: 2px;
+    padding-bottom: 0.8rem;
+  }
+  .three-column {
+    display: block;
+    margin: 0.8rem auto 0 auto;
+    
+  }
+
+
+}
+
+
+
+@media only screen and (max-width:600px){
+
+  .main-content p {
+    width: 100%;
+  }
+
+  .hero-img{
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 200%;
+  }
+
+
+}
+
+
