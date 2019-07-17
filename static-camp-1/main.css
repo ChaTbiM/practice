@@ -1,0 +1,481 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+ .hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible; }
+    .hamburger:hover {
+      opacity: 0.7; }
+    .hamburger.is-active:hover {
+      opacity: 0.7; }
+    .hamburger.is-active .hamburger-inner,
+    .hamburger.is-active .hamburger-inner::before,
+    .hamburger.is-active .hamburger-inner::after {
+      background-color: #000; }
+  
+  .hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative; }
+  
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px; }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      width: 40px;
+      height: 4px;
+      background-color: #000;
+      border-radius: 4px;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease; }
+    .hamburger-inner::before, .hamburger-inner::after {
+      content: "";
+      display: block; }
+    .hamburger-inner::before {
+      top: -10px; }
+    .hamburger-inner::after {
+  bottom: -10px; }
+
+/*
+   * Squeeze
+   */
+   .hamburger--squeeze .hamburger-inner {
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    .hamburger--squeeze .hamburger-inner::before {
+      transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    .hamburger--squeeze .hamburger-inner::after {
+      transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  
+  .hamburger--squeeze.is-active .hamburger-inner {
+    transform: rotate(45deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .hamburger--squeeze.is-active .hamburger-inner::before {
+      top: 0;
+      opacity: 0;
+      transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    .hamburger--squeeze.is-active .hamburger-inner::after {
+      bottom: 0;
+      transform: rotate(-90deg);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+
+/* /////////////////////////////////////*/
+/* Header Styling */ 
+
+.header {
+    background-color: #2B2B2B;
+}
+
+/*top */ 
+.top {
+    /* box */ 
+    display: block;
+    width:100%;
+    text-align: right;
+   
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.top img {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    background-color: lightblue;
+}
+
+.top a {
+    color: lightblue;
+    margin-right: 1.681rem;
+}
+/* cnt inside header */
+.cnt { 
+    /* Box Model */ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding-bottom: 1.681rem;
+}
+
+.nav,
+.right {
+    flex: 1 1 auto;
+}
+
+/* nav left */ 
+
+.nav-2 {
+    display: none;
+}
+
+
+.nav
+{ 
+    /* Box Model */ 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav__list,
+.nav__list__item{
+   /* Box Model */ 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   text-transform: uppercase;
+}
+
+.nav__list {
+    padding-left: 1.681rem;
+}
+
+.nav__list__item img {
+    margin-right: 0.4rem;
+    background-color: lightblue;
+}
+
+.nav__list__item {
+    margin-right: 1.2rem;
+}
+
+.nav__list__item a { 
+    color: #eee;
+    font-weight: bold;
+}
+
+/* right bottom  */ 
+
+.right__bottom {
+    /* box */ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
+}
+
+.right__bottom img {
+    margin-right: 1.618rem;
+}
+
+
+/* ///////////////////////////////////// */
+/* MAin Styling */ 
+
+.main {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    padding: 0 1.681rem 1rem 1.681rem;
+}
+
+.main__title {
+    flex-basis: 100%;
+    
+}
+
+/* CARD */ 
+/* CARD TOP */
+.main__card {
+    flex-basis: calc(100% / 4 - 0.5rem);
+
+    margin-bottom: 2rem;
+}
+
+.img__card {
+    width: calc(100%);
+}
+
+.main__card__top a {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    padding-top: 58%;
+    
+    background: linear-gradient(rgba(20, 20, 20, 0.45), 
+    rgba(22, 22, 22, 0.45)),url(picture.jpg);
+    background-size: cover;
+}
+
+
+.share {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+
+    color: black;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.main__card__top__views {
+    position: absolute;
+    right: 0.61rem; 
+    top: 1rem;
+    
+    
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: white;;
+   font-weight: bold;
+}
+
+
+.views,
+.number {
+
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Card BOTTom */ 
+
+
+.main__card__bottom {
+    padding: 1rem;
+    background-color: rgba(245, 245, 245, 0.842);
+}
+
+
+.name h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    color: rgb(126, 125, 125);
+    font-size: 1.2rem;
+}
+
+.link {
+    padding: .4rem .8rem;
+    margin: 1rem 0;
+    background-color: rgba(51, 51, 51, 0.1);
+    color: darkgrey;
+}
+
+.link a {
+    color: rgba(20, 20, 20, 0.6);
+   
+}
+
+
+
+h5 {
+    font-weight: normal;
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+h4 {
+    font-weight: lighter;
+    margin-top: 0.4rem;
+    font-size: 1.10em;
+    color: rgba(20, 20, 20, 0.6);
+
+}
+
+.attach {
+    color: rgba(39, 39, 39, 0.849);
+
+}
+
+.att__number {
+    color: rgb(100, 187, 241);
+    font-size: 1.9rem;
+    font-weight: normal;
+}
+
+/*****************************************************************/
+/* Since USing MAx width the max-width goes from higher to lower to work
+correctyl */ 
+
+.hamburger{
+    display: none;
+}
+
+
+
+
+
+
+/* REsponsive :) under 768px */ 
+@media only screen and (max-width: 760px){
+    
+    /*  header */ 
+    
+    /*main */ 
+    /* card */
+    .main__card {
+        flex-basis: calc(100% / 2 - 0.8rem);
+    }
+
+
+}
+
+
+
+
+/* Responsive under 700px */ 
+
+@media only screen and (max-width: 700px){
+    
+    /*  header */ 
+    
+    /*menu */ 
+        .nav {
+            display: none;
+        }
+        .cnt {
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .hamburger{
+            display: flex;
+            flex: 1 1 auto;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 2rem;
+        } 
+
+        
+       .nav-2 {
+          
+           justify-content: center;
+           align-items: center;
+       }
+        
+        .nav__list {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+        }
+        
+        .nav__list__item {
+            margin-bottom: 1rem;
+            text-align: center;
+           
+        }
+
+        .cnt {
+            padding-bottom: 0;
+        }
+
+       .is-active {
+           margin-right: 2rem;
+       }
+       
+        
+    /*main */ 
+    /* card */
+   
+
+
+}
+
+
+/* Responsive under 600px */ 
+
+@media only screen and (max-width: 600px){
+    
+    /*  header */ 
+    
+    /*menu */ 
+    /*
+        .nav {
+            display: none;
+        }
+*/
+       
+    /*main */ 
+    /* card */
+    .main__card {
+        flex-basis: calc(100% );
+    }
+
+
+
+}
+
+@media only screen and (max-width: 400px){
+
+    .right__bottom {
+        display: none;
+    }
+    .hamburger{
+        width: 100%;
+        margin-left: 0;
+    }
+    .hamburger-box{
+        display: block;
+        width: 100%;
+    }
+    .hamburger-inner {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+
+.show {
+    display: flex;
+}
